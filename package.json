@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install"
+    "cl:gradle": "cd android && ./gradlew clean && cd ..",
+    "cl:full": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install"
   },
   "overrides": {
     "react-refresh": "~0.14.0",
@@ -20,11 +21,13 @@
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.9",
     "expo": "~49.0.16",
+    "expo-build-properties": "~0.8.3",
     "expo-constants": "~14.4.2",
     "expo-linking": "~5.0.2",
     "expo-router": "^2.0.10",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
+    "expo-system-ui": "~2.4.0",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-gesture-handler": "~2.12.0",
